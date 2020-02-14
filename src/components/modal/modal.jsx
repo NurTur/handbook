@@ -38,7 +38,7 @@ export default function SimpleModal({ columns, isOpenModal, closeModal }) {
     }
 
     const saveNewUser=()=> {
-        console.log(Object.values(NewGlobalUser).length,'  ',columns.length-1);
+
         let count = 0;
         let copyOfUser = {...NewGlobalUser};
 

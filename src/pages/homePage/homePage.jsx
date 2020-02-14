@@ -47,7 +47,7 @@ class HomePage extends React.Component
     }
 
     closeModal=()=>{
-        this.setState(()=>({isOpenModal:false}));
+        this.setState({isOpenModal:false, data: rows});
     }
 
     render() {
