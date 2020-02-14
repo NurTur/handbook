@@ -17,7 +17,6 @@ const prodConfiguration = env => {
             plugins: [
                 new MiniCssExtractPlugin(),
                 new OptimizeCssAssetsPlugin(),
-                //new Visualizer({ filename: "./statistics.html" })
             ]
         }
     ]);

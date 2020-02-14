@@ -17,11 +17,9 @@ module.exports = env => {
             module: {
                 rules: [
                     {
-                        test: /\.(jsx|js)$/,
+                        test: /\.(js|jsx)$/,
                         exclude: /node_modules/,
-                        use: {
-                            loader: "babel-loader"
-                        }
+                        use: ["babel-loader"]
                     },
                     {
                         test: /\.less$/,
@@ -32,6 +30,10 @@ module.exports = env => {
                             "css-loader",
                             "less-loader"
                         ]
+                    },
+                    {
+                        test: /\.svg$/,
+                        loader: 'svg-inline-loader'
                     }
                 ]
             },

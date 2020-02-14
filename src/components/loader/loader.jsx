@@ -9,7 +9,7 @@ function Loader({ loaderText }) {
                     <div className="inner">
                         <div className="loader" />
                         <div className="text">
-                            {loaderText}
+                            { loaderText }
                         </div>
                     </div>
                 </div>

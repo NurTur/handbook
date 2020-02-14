@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import {
     BrowserRouter as Router,
     Switch,
@@ -7,7 +7,7 @@ import {
 import HomePage from "../services/homePage";
 
 
-class AppRouter extends React.Component {
+class AppRouter extends PureComponent {
     state = { HomePage: null }
 
     componentDidMount() {
@@ -16,7 +16,6 @@ class AppRouter extends React.Component {
 
     onLoad = async () => {
         const homePage = await HomePage();
-        console.log(homePage);
         this.setState({ homePage });
     }
 
@@ -26,7 +25,7 @@ class AppRouter extends React.Component {
             <Router>
                 <Switch>
                     <Route path="/" exact component={homePage} />
-                    <Route path="*" component={() => <div>ddd</div>} />
+                    <Route path="*" component={() => <div>Страница не найдена</div>} />
                 </Switch>
             </Router>
         );

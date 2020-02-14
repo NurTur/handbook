@@ -1,4 +1,4 @@
 export default async () => {
-    const data = await import(/* webpackChunkName: 'HomePage' */ '../components/table/table.jsx');
+    const data = await import(/* webpackChunkName: 'HomePage' */ '../pages/homePage/homePage.jsx');
     return data.default;
 };
